@@ -20,8 +20,6 @@
 | date\_info | 是 | Json结构 |  | 使用日期，有效期的信息。包含begin\_timestamp和end\_timestamp |
 | begin\_timestamp | 否 | unsigned int | 14300000 | 表示起用时间。从1970年1月1日00:00:00至起用时间的秒数，最终需转换为字符串形态传入。（东八区时间，单位为秒） |
 | end\_timestamp | 否 | unsigned int | 15300000 | 表示结束时间，建议设置为截止日期的23:59:59过期。（东八区时间，单位为秒） |
-| bind\_id | 否 | bool | true | 是否指定用户领取，填写true或false。默认为false。 |
-| location\_id\_list | 否 | array | 1234，2312 | 票券使用范围 |
 | source | 否 | string（36） | 志愿汇 | 第三方来源名，例如志愿汇、打卡器。 |
 | custom\_url\_name | 否 | string（15） | 立即报名 | 自定义跳转外链的入口名字。 |
 | custom\_url | 否 | string（128） | "xxxx.com" | 自定义跳转的URL。 |
@@ -33,7 +31,14 @@
 | can\_share | 否 | bool | false | 票券领取页面是否可分享。 |
 | can\_give\_friend | 否 | bool | false | 票券是否可转赠。 |
 
-
-
 岗位类票
+
+| 参数名 | 必填 | 类型 | 示例值 | 描述 |
+| :--- | :--- | :--- | :--- | :--- |
+| card\_type | 是 | string\(24\) | position | 岗位类门票 |
+| base\_info | 是 | Json结构 | 见示例。 | 基本的票圈数据，见上表，所有卡券通用。 |
+| meeting\_detail | 是 | string\(3072\) | 本次会议于2015年5月10号在广州举行，会场地点：xxxx。 | 会议详情。 |
+| map\_url | 否 | string\(128\) | xxx.com | 会场导览图。 |
+
+
 
