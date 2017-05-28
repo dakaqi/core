@@ -6,4 +6,5 @@
 * [货币](huo-bi.md)
 * [配置](xiao-shou-fang-shi.md)
 * [用户字段表](yong-hu-zi-duan-biao.md)
+* [岗位](gang-wei.md)
 
